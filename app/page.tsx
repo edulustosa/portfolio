@@ -1,15 +1,18 @@
 'use client'
 
 import { useState } from 'react'
-import Donut from 'react-spinning-donut'
 
 import Help from './commands/help'
 import Intro from './ui/components/intro'
+import About from './commands/about'
+import SpinningDonut from './commands/spinning-donut'
 import useHistory from './hooks/history'
 
 const commands: { [key: string]: JSX.Element } = {
   help: <Help />,
-  donut: <Donut color="#E1E1DF" fontSize={6} scaleX={1} scaleY={0.75} />,
+  intro: <Intro />,
+  donut: <SpinningDonut />,
+  whoami: <About />,
 }
 
 export default function Home() {
@@ -35,7 +38,7 @@ export default function Home() {
     }
 
     setBins((prev) => [
-      <p key={prev.length} className="text-red-500">
+      <p key={prev.length} className="text-main-orange">
         shell: command not found: {cmd}. Try &apos;help&apos; to get started.
       </p>,
       ...prev,
@@ -56,14 +59,16 @@ export default function Home() {
   }
 
   return (
-    <main className="w-3/6 rounded-lg bg-background p-5 text-main-font-color">
+    <main className="w-3/5 rounded-lg bg-background p-5 text-main-font-color shadow-lg shadow-background">
       <div className="mb-7 flex justify-center">
         <h1 className="text-secondary-font-color">terminal</h1>
       </div>
 
-      <ul className="custom-scrollbar-hidden flex h-[380px] max-h-[380px] flex-col-reverse gap-8 overflow-y-auto">
+      <ul className="custom-scrollbar-hidden flex h-[390px] max-h-[390px] flex-col-reverse items-center gap-8 overflow-y-auto">
         {bins.map((command, i) => (
-          <li key={i}>{command}</li>
+          <li className="w-11/12" key={i}>
+            {command}
+          </li>
         ))}
       </ul>
 
@@ -72,7 +77,7 @@ export default function Home() {
       </div>
 
       <form onSubmit={handleInput}>
-        <div className="flex gap-1">
+        <div className="flex gap-3">
           <span className="text-secondary-font-color">$</span>
 
           <input
