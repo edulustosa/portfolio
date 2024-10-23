@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+.custom-scrollbar-hidden {
+  scrollbar-width: none;
+}
+
+.custom-scrollbar-hidden {
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+}
