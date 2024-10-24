@@ -3,9 +3,10 @@
 import { useState } from 'react'
 
 import Help from './commands/help'
-import Intro from './ui/components/intro'
+import Intro from './commands/intro'
 import About from './commands/about'
 import SpinningDonut from './commands/spinning-donut'
+import Projects from './commands/projects'
 import useHistory from './hooks/history'
 
 const commands: { [key: string]: JSX.Element } = {
@@ -13,6 +14,7 @@ const commands: { [key: string]: JSX.Element } = {
   intro: <Intro />,
   donut: <SpinningDonut />,
   whoami: <About />,
+  projects: <Projects />,
 }
 
 export default function Home() {
@@ -73,7 +75,7 @@ export default function Home() {
       </ul>
 
       <div className="my-5 flex justify-center">
-        <hr className="w-11/12 border-[#454541]" />
+        <hr className="w-11/12 border-light-gray" />
       </div>
 
       <form onSubmit={handleInput}>

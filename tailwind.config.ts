@@ -11,6 +11,7 @@ const config: Config = {
       colors: {
         background: '#30302E',
         'main-font-color': '#7E7F7D',
+        'light-gray': '#454541',
         'secondary-font-color': '#E1E1DF',
         'main-orange': '#D86731',
       },

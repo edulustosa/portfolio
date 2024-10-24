@@ -2,6 +2,7 @@ import { BiLogoDocker, BiLogoTypescript } from 'react-icons/bi'
 import { DiRedis } from 'react-icons/di'
 import { FaNodeJs, FaReact } from 'react-icons/fa'
 import { FaGolang } from 'react-icons/fa6'
+import { IoLogoJavascript } from 'react-icons/io5'
 import { RiNextjsFill, RiTailwindCssFill } from 'react-icons/ri'
 import { SiMongodb, SiPostgresql } from 'react-icons/si'
 
@@ -9,6 +10,10 @@ const logos = [
   {
     name: 'TypeScript',
     icon: <BiLogoTypescript size={35} />,
+  },
+  {
+    name: 'JavaScript',
+    icon: <IoLogoJavascript size={29} />,
   },
   {
     name: 'NodeJS',

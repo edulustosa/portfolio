@@ -3,9 +3,10 @@ export default function Help() {
     <div>
       <p>Commands:</p>
       <ul>
-        <li>help - shows this message</li>
-        <li>clear - clears the terminal</li>
-        <li>whoami - information about me</li>
+        <li>help - Shows this message</li>
+        <li>whoami - Information about me</li>
+        <li>projects - Collection of my main projects</li>
+        <li>clear - Clears the terminal</li>
       </ul>
     </div>
   )
