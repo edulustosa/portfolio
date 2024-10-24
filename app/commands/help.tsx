@@ -6,6 +6,7 @@ export default function Help() {
         <li>help - Shows this message</li>
         <li>whoami - Information about me</li>
         <li>projects - Collection of my main projects</li>
+        <li>banner - Shows the initial banner</li>
         <li>clear - Clears the terminal</li>
       </ul>
     </div>

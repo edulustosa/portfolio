@@ -1,25 +1,32 @@
 'use client'
 
 import { useState } from 'react'
+import useHistory from './hooks/history'
 
 import Help from './commands/help'
-import Intro from './commands/intro'
+import Banner from './commands/banner'
 import About from './commands/about'
-import SpinningDonut from './commands/spinning-donut'
 import Projects from './commands/projects'
-import useHistory from './hooks/history'
+import Sumfetch from './commands/sumfetch'
 
 const commands: { [key: string]: JSX.Element } = {
   help: <Help />,
-  intro: <Intro />,
-  donut: <SpinningDonut />,
+  banner: <Banner />,
   whoami: <About />,
   projects: <Projects />,
+  sumfetch: <Sumfetch />,
+}
+
+const actions: { [key: string]: () => Window | null } = {
+  github: () => window.open('https://github.com/edulustosa', '_blank'),
+  email: () => window.open('mailto:eduardolustosa26@gmail.com', '_blank'),
+  linkedin: () =>
+    window.open('https://www.linkedin.com/in/eduardolustosa/', '_blank'),
 }
 
 export default function Home() {
   const [cmd, setCommand] = useState('')
-  const [bins, setBins] = useState<JSX.Element[]>([<Intro key={0} />])
+  const [bins, setBins] = useState<JSX.Element[]>([<Banner key={0} />])
   const { history, position, setHistory, setHistoryPosition } = useHistory()
 
   const handleInput = (event: React.FormEvent<HTMLFormElement>) => {
@@ -35,6 +42,13 @@ export default function Home() {
     const Command = commands[cmd]
     if (Command) {
       setBins((prev) => [Command, ...prev])
+      setCommand('')
+      return
+    }
+
+    const action = actions[cmd]
+    if (action) {
+      action()
       setCommand('')
       return
     }
