@@ -96,12 +96,12 @@ export default function Home() {
   }
 
   return (
-    <main className="w-3/5 rounded-lg bg-background p-5 text-main-font-color shadow-lg shadow-background">
+    <main className="h-screen w-screen bg-background p-5 text-sm text-main-font-color shadow-lg shadow-background md:text-base lg:h-auto lg:w-3/5 lg:rounded-lg lg:text-base">
       <div className="mb-7 flex justify-center">
         <h1 className="text-secondary-font-color">terminal</h1>
       </div>
 
-      <ul className="custom-scrollbar-hidden flex h-[390px] max-h-[390px] flex-col-reverse items-center gap-8 overflow-y-auto">
+      <ul className="custom-scrollbar-hidden flex h-4/5 flex-col-reverse items-center gap-8 overflow-y-auto lg:h-[390px]">
         {bins.map((command, i) => (
           <li className="w-11/12" key={i}>
             {command}

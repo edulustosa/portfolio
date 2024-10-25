@@ -9,8 +9,10 @@ export default function Sumfetch() {
   const t = useTranslation()
 
   return (
-    <div className="ml-8 flex items-center gap-24">
-      <Donut color="#E1E1DF" fontSize={6} scaleX={1} scaleY={0.75} />
+    <div className="flex flex-col items-center justify-center md:flex-row md:gap-24 md:lg:ml-8 lg:ml-8 lg:flex-row lg:justify-normal lg:gap-24">
+      <div style={{ lineHeight: 1.5 }}>
+        <Donut color="#E1E1DF" fontSize={6} scaleX={1} scaleY={0.75} />
+      </div>
 
       <div className="divide-y divide-dashed divide-main-font-color">
         <div className="my-2 flex items-center gap-2">

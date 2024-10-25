@@ -67,7 +67,7 @@ export default function About() {
 
       <h3>Skills</h3>
 
-      <ul className="flex gap-3">
+      <ul className="flex flex-wrap gap-3">
         {logos.map((logo) => (
           <li className="flex items-center justify-center" key={logo.name}>
             <abbr title={logo.name}>{logo.icon}</abbr>

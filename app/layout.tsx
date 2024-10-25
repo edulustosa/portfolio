@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${jetBrainsMono.className} flex h-screen items-center justify-center bg-main-orange antialiased`}
+        className={`${jetBrainsMono.className} flex h-screen items-center justify-center bg-background antialiased lg:bg-main-orange`}
       >
         <LanguageProvider>{children}</LanguageProvider>
       </body>

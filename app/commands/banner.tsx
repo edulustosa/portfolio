@@ -21,7 +21,7 @@ export default function Intro() {
 
   return (
     <>
-      <pre>{banner}</pre>
+      <pre className="hidden md:block lg:block">{banner}</pre>
       <p className="mt-2">{t.banner}</p>
     </>
   )
