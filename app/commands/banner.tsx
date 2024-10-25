@@ -1,3 +1,5 @@
+import useTranslation from '../hooks/translation'
+
 const banner = `
 ███████╗██████╗ ██╗   ██╗ █████╗ ██████╗ ██████╗  ██████╗  
 ██╔════╝██╔══██╗██║   ██║██╔══██╗██╔══██╗██╔══██╗██╔═══██╗ 
@@ -15,10 +17,12 @@ const banner = `
 `
 
 export default function Intro() {
+  const t = useTranslation()
+
   return (
     <>
       <pre>{banner}</pre>
-      <p className="mt-2">Type &apos;help&apos; to see available commands</p>
+      <p className="mt-2">{t.banner}</p>
     </>
   )
 }

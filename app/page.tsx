@@ -8,6 +8,7 @@ import Banner from './commands/banner'
 import About from './commands/about'
 import Projects from './commands/projects'
 import Sumfetch from './commands/sumfetch'
+import { useLanguage } from './components/language-context'
 
 const commands: { [key: string]: JSX.Element } = {
   help: <Help />,
@@ -28,6 +29,7 @@ export default function Home() {
   const [cmd, setCommand] = useState('')
   const [bins, setBins] = useState<JSX.Element[]>([<Banner key={0} />])
   const { history, position, setHistory, setHistoryPosition } = useHistory()
+  const { setLocale } = useLanguage()
 
   const handleInput = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
@@ -35,6 +37,25 @@ export default function Home() {
 
     if (cmd === 'clear') {
       setBins([])
+      setCommand('')
+      return
+    }
+
+    if (cmd.startsWith('lang')) {
+      const lang = cmd.split(' ')[1]
+      if (lang !== 'en' && lang !== 'pt-br') {
+        setBins((prev) => [
+          <p key={prev.length} className="text-main-orange">
+            shell: command not found: {cmd}. Try &apos;help&apos; to get
+            started.
+          </p>,
+          ...prev,
+        ])
+        setCommand('')
+        return
+      }
+
+      setLocale(lang as 'en' | 'pt-br')
       setCommand('')
       return
     }

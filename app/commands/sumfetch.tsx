@@ -3,8 +3,11 @@ import { FaCode, FaGithub, FaLinkedin } from 'react-icons/fa'
 import { AiFillCode } from 'react-icons/ai'
 import { IoIosGitNetwork, IoMdPerson } from 'react-icons/io'
 import { MdAlternateEmail, MdEmail } from 'react-icons/md'
+import useTranslation from '../hooks/translation'
 
 export default function Sumfetch() {
+  const t = useTranslation()
+
   return (
     <div className="ml-8 flex items-center gap-24">
       <Donut color="#E1E1DF" fontSize={6} scaleX={1} scaleY={0.75} />
@@ -18,7 +21,7 @@ export default function Sumfetch() {
         <div className="flex flex-col gap-1">
           <span className="mt-2 inline-flex items-center gap-2">
             <AiFillCode />
-            <span>ABOUT</span>
+            <span>{t.sumfetch.about}</span>
           </span>
 
           <span className="inline-flex items-center gap-2">
@@ -39,7 +42,7 @@ export default function Sumfetch() {
         <div className="flex flex-col gap-1">
           <span className="mt-2 inline-flex items-center gap-2">
             <MdAlternateEmail />
-            <span>CONTACT</span>
+            <span>{t.sumfetch.contact}</span>
           </span>
 
           <a

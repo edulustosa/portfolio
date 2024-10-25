@@ -5,6 +5,7 @@ import { FaGolang } from 'react-icons/fa6'
 import { IoLogoJavascript } from 'react-icons/io5'
 import { RiNextjsFill, RiTailwindCssFill } from 'react-icons/ri'
 import { SiMongodb, SiPostgresql } from 'react-icons/si'
+import useTranslation from '../hooks/translation'
 
 const logos = [
   {
@@ -54,19 +55,15 @@ const logos = [
 ]
 
 export default function About() {
+  const t = useTranslation()
+
   return (
     <div className="flex flex-col gap-5">
       <h2 className="text-secondary-font-color">Eduardo Lustosa de Souza</h2>
 
       <span>Back-end Developer | NodeJS | TypeScript | Go</span>
 
-      <p>
-        I am a software developer with a focus on back-end development. I have
-        experience with Go, NodeJS, and TypeScript. Also have experience in
-        front-end development with React and NextJS. I am passionate about
-        technology and software development. I am always looking for new
-        challenges and opportunities to learn new things.
-      </p>
+      <p>{t.about}</p>
 
       <h3>Skills</h3>
 

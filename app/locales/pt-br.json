@@ -1,0 +1,24 @@
+{
+  "about": "Sou desenvolvedor de software com foco em desenvolvimento back-end. Tenho experiência com Go, NodeJS e TypeScript. Também possuo experiência no desenvolvimento front-end com React e NextJS. Sou apaixonado por tecnologia e desenvolvimento de software e estou sempre em busca de novos desafios e oportunidades para aprender coisas novas.",
+  "banner": "Digite 'help' para ver os comandos disponíveis",
+  "hydroHelper": "Uma extensão do Chrome projetada para ajudar os usuários a gerenciar sua ingestão diária de água. Ela permite que os usuários registrem seu consumo de água e monitora o progresso em direção a uma meta diária de hidratação. A extensão também envia notificações de lembrete a cada 90 minutos para incentivar a ingestão de água, parando assim que a meta diária for alcançada.",
+  "cachingProxy": "Uma ferramenta de linha de comando (CLI) que inicia um servidor proxy de cache. Ela encaminha as solicitações para o servidor real e armazena as respostas em cache. Se a mesma solicitação for feita novamente, a ferramenta retorna a resposta em cache em vez de encaminhar a solicitação para o servidor.",
+  "goPay": "Este projeto é uma implementação em Go do desafio de back-end do PicPay, que propõe a criação de uma versão simplificada do PicPay, onde os usuários podem fazer depósitos e transferências de dinheiro. O sistema suporta dois tipos de usuários: usuários comuns e comerciantes, ambos com suas respectivas carteiras para transações financeiras entre eles.",
+  "sumfetch": {
+    "about": "SOBRE",
+    "contact": "CONTATO"
+  },
+  "commands": "Comandos disponíveis:",
+  "help": {
+    "lang en | pt-br": "Mudar o idioma",
+    "whoami": "Informações sobre mim",
+    "projects": "Coleção dos meus principais projetos",
+    "sumfetch": "Resumo do meu perfil",
+    "github": "Abrir meu perfil no GitHub",
+    "linkedin": "Abrir meu perfil no LinkedIn",
+    "email": "Enviar um email para mim",
+    "banner": "Mostra o banner inicial",
+    "help": "Mostra esta mensagem",
+    "clear": "Limpa o terminal"
+  }
+}
