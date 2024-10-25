@@ -18,14 +18,12 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <LanguageProvider>
-      <html lang="en">
-        <body
-          className={`${jetBrainsMono.className} flex h-screen items-center justify-center bg-main-orange antialiased`}
-        >
-          {children}
-        </body>
-      </html>
-    </LanguageProvider>
+    <html lang="en">
+      <body
+        className={`${jetBrainsMono.className} flex h-screen items-center justify-center bg-main-orange antialiased`}
+      >
+        <LanguageProvider>{children}</LanguageProvider>
+      </body>
+    </html>
   )
 }
