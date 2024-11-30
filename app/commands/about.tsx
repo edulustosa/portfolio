@@ -1,6 +1,6 @@
 import { BiLogoDocker, BiLogoTypescript } from 'react-icons/bi'
 import { DiRedis } from 'react-icons/di'
-import { FaNodeJs, FaReact } from 'react-icons/fa'
+import { FaAws, FaNodeJs, FaReact } from 'react-icons/fa'
 import { FaGolang } from 'react-icons/fa6'
 import { IoLogoJavascript } from 'react-icons/io5'
 import { RiNextjsFill, RiTailwindCssFill } from 'react-icons/ri'
@@ -35,6 +35,10 @@ const logos = [
   {
     name: 'Redis',
     icon: <DiRedis size={35} />,
+  },
+  {
+    name: 'AWS',
+    icon: <FaAws size={28} />,
   },
   {
     name: 'Docker',
