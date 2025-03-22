@@ -4,7 +4,7 @@ import { FaAws, FaNodeJs, FaReact } from 'react-icons/fa'
 import { FaGolang } from 'react-icons/fa6'
 import { IoLogoJavascript } from 'react-icons/io5'
 import { RiNextjsFill, RiTailwindCssFill } from 'react-icons/ri'
-import { SiMongodb, SiPostgresql } from 'react-icons/si'
+import { SiApachekafka, SiMongodb, SiPostgresql } from 'react-icons/si'
 import useTranslation from '../hooks/translation'
 
 const logos = [
@@ -43,6 +43,10 @@ const logos = [
   {
     name: 'Docker',
     icon: <BiLogoDocker size={35} />,
+  },
+  {
+    name: 'Kafka',
+    icon: <SiApachekafka size={28} />,
   },
   {
     name: 'React',

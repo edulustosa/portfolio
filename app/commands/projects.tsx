@@ -1,9 +1,10 @@
-import { BiLogoDocker } from 'react-icons/bi'
+import { BiLogoDocker, BiLogoTypescript } from 'react-icons/bi'
 import { DiRedis } from 'react-icons/di'
-import { FaGithubAlt } from 'react-icons/fa'
+import { FaAws, FaGithubAlt, FaNodeJs } from 'react-icons/fa'
 import { FaGolang } from 'react-icons/fa6'
 import { IoLogoJavascript } from 'react-icons/io5'
-import { SiPostgresql } from 'react-icons/si'
+import { SiApachekafka, SiMongodb, SiPostgresql } from 'react-icons/si'
+
 import useTranslation from '../hooks/translation'
 
 interface Project {
@@ -41,6 +42,30 @@ export default function Projects() {
         <FaGolang key={0} size={38} />,
         <SiPostgresql key={1} size={28} />,
         <BiLogoDocker key={3} size={35} />,
+      ],
+    },
+    {
+      title: 'Anotaaí Backend Challenge',
+      href: 'https://github.com/edulustosa/anotaai-desafio-backend',
+      description: t.anotaiBackEndChallenge,
+      techs: [
+        <BiLogoTypescript key={0} size={35} />,
+        <FaNodeJs key={1} size={28} />,
+        <SiMongodb key={2} size={28} />,
+        <FaAws key={3} size={28} />,
+      ],
+    },
+    {
+      title: 'Imago',
+      href: 'https://github.com/edulustosa/imago',
+      description: t.imago,
+      techs: [
+        <FaGolang key={0} size={38} />,
+        <SiPostgresql key={1} size={28} />,
+        <DiRedis key={2} size={35} />,
+        <SiApachekafka key={3} size={28} />,
+        <BiLogoDocker key={4} size={35} />,
+        <FaAws key={5} size={28} />,
       ],
     },
   ]

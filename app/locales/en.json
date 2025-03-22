@@ -4,6 +4,8 @@
   "hydroHelper": "A Chrome extension designed to help users manage their daily water intake. It allows users to log their water consumption and monitors progress toward a daily hydration goal. The extension also sends reminder notifications every 90 minutes to prompt water intake, ceasing once the daily goal is achieved.",
   "cachingProxy": "A CLI tool that starts a caching proxy server. It forwards requests to the actual server and caches the responses. If the same request is made again, it returns the cached response instead of forwarding the request to the server.",
   "goPay": "This project is an implementation in Go of PicPay's back-end challenge, which proposes the creation of a simplified version of PicPay, where users can make deposits and money transfers. The system supports two types of users: regular users and merchants, both with their respective wallets for financial transactions between them.",
+  "imago": "Imago is a backend system for an image processing service similar to Cloudinary. The service allow users to upload images, perform various transformations, and retrieve images in different formats. The system feature user authentication, image upload, transformation operations, and efficient retrieval mechanisms.",
+  "anotaiBackEndChallenge": "API for AnotaAí backend challenge, is a Node.js-based product catalog management system with CRUD operations, MongoDB storage, event processing via AWS SQS/Lambda, and automatic JSON catalog persistence in S3.",
   "sumfetch": {
     "about": "ABOUT",
     "contact": "CONTACT"
