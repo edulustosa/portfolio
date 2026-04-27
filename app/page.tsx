@@ -26,14 +26,12 @@ const actions: { [key: string]: () => Window | null } = {
 }
 
 const autocompleteCommands = [
-  ...new Set([
-    ...Object.keys(commands),
-    ...Object.keys(actions),
-    'clear',
-    'lang en',
-    'lang pt-br',
-  ]),
-]
+  ...Object.keys(commands),
+  ...Object.keys(actions),
+  'clear',
+  'lang en',
+  'lang pt-br',
+].filter((command, index, list) => list.indexOf(command) === index)
 
 const getLevenshteinDistance = (source: string, target: string) => {
   if (source === target) {
