@@ -10,7 +10,7 @@ interface LanguageContextProps {
 const LanguageContext = createContext<LanguageContextProps | null>(null)
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [locale, setLocale] = useState('en')
+  const [locale, setLocale] = useState('pt-br')
 
   return (
     <LanguageContext.Provider value={{ locale, setLocale }}>
